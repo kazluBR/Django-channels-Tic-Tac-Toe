@@ -23,7 +23,7 @@ let myturn = true;
 let elementArray = document.getElementsByClassName("square");
 for (var i = 0; i < elementArray.length; i++) {
   elementArray[i].addEventListener("click", (event) => {
-    const index = event.path[0].getAttribute("data-index");
+    const index = event.target.getAttribute("data-index");
     if (gameBoard[index] == -1) {
       if (!myturn) {
         alert("Wait for other to place the move");
